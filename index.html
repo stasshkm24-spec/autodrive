@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>AUTODRIVE</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-title"><span class="logo-white">AUTO</span><span class="logo-yellow">DRIVE</span></span>
+                <span class="logo-text">Автосалон і сервісний центр</span>
+            </a>
+
+            <nav class="nav" id="nav">
+                <a href="index.html">Головна</a>
+                <a href="car-catalog.html">Каталог авто</a>
+                <a href="#services">Послуги</a>
+                <a href="#test-drive">Тест-драйв</a>
+                <a href="#promo">Акції</a>
+                <a href="#about">Про нас</a>
+                <a href="#contacts">Контакти</a>
+            </nav>
+
+            <a href="tel:+380671234567" class="header-phone">+38 (067) 123 45 67</a>
+            <a href="tel:+380671234567" class="call-btn">Замовити дзвінок</a>
+
+            <button class="burger" id="burger" type="button" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="hero">
+            <div class="hero-slide active" style="background-image: url('img/bacground_audi.webp');"></div>
+            <div class="hero-slide" style="background-image: url('img/bacground_audiA6.webp');"></div>
+            <div class="hero-slide" style="background-image: url('img/bacground_audiQ5.webp');"></div>
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1>Твій ідеальний <span>автомобіль</span> чекає на тебе</h1>
+                    <p>Широкий вибір авто, вигідні умови та професійний сервіс на кожному етапі</p>
+
+                    <div class="hero-actions">
+                        <a href="car-catalog.html" class="hero-btn hero-btn-primary">Переглянути каталог</a>
+                        <a href="#test-drive" class="hero-btn hero-btn-secondary">Запис на тест-драйв</a>
+                    </div>
+                </div>
+
+                <div class="slider-controls" aria-label="Керування hero слайдером">
+                    <button class="slider-arrow" id="prevSlide" type="button" aria-label="Попередній слайд">&#8249;</button>
+                    <div class="slider-dots" id="sliderDots"></div>
+                    <button class="slider-arrow" id="nextSlide" type="button" aria-label="Наступний слайд">&#8250;</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-catalog section-dark" id="catalog">
+            <div class="container section-column">
+                <div class="section-head">
+                    <div>
+                        <h2>Каталог авто</h2>
+                        <p>Обери категорію і переглянь актуальні пропозиції автосалону</p>
+                    </div>
+                    <a href="car-catalog.html" class="text-link">Переглянути всі авто</a>
+                </div>
+
+                <div class="category-tabs" data-filter-group="home">
+                    <button class="tab-btn active" type="button" data-filter="all">Всі авто</button>
+                    <button class="tab-btn" type="button" data-filter="new">Нові</button>
+                    <button class="tab-btn" type="button" data-filter="used">З пробігом</button>
+                    <button class="tab-btn" type="button" data-filter="premium">Преміум</button>
+                    <button class="tab-btn" type="button" data-filter="electric">Електромобілі</button>
+                </div>
+
+                <div class="home-cars" id="homeCars">
+                    <article class="car-card" data-category="new premium" data-brand="bmw" data-fuel="diesel" data-year="2024" data-mileage="0" data-price="2450000">
+                        <div class="car-image"><img src="img/bacground_audiQ5.webp" alt="BMW X5"></div>
+                        <div class="car-body">
+                            <h3>BMW X5</h3>
+                            <p>2024 · 3.0 л · Дизель · Автомат</p>
+                            <div class="car-bottom"><strong>2 450 000 грн</strong><a href="car-catalog.html" class="small-btn">Детальніше</a></div>
+                        </div>
+                    </article>
+                    <article class="car-card" data-category="used premium" data-brand="audi" data-fuel="diesel" data-year="2022" data-mileage="65000" data-price="2650000">
+                        <div class="car-image"><img src="img/bacground_audi.webp" alt="Audi Q7"></div>
+                        <div class="car-body">
+                            <h3>Audi Q7</h3>
+                            <p>2022 · 3.0 л · Дизель · Автомат</p>
+                            <div class="car-bottom"><strong>2 650 000 грн</strong><a href="car-catalog.html" class="small-btn">Детальніше</a></div>
+                        </div>
+                    </article>
+                    <article class="car-card" data-category="electric new" data-brand="tesla" data-fuel="electric" data-year="2023" data-mileage="12000" data-price="1850000">
+                        <div class="car-image"><img src="img/bacground_audiA6.webp" alt="Tesla Model Y"></div>
+                        <div class="car-body">
+                            <h3>Tesla Model Y</h3>
+                            <p>2023 · Електро · Автомат</p>
+                            <div class="car-bottom"><strong>1 850 000 грн</strong><a href="car-catalog.html" class="small-btn">Детальніше</a></div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="catalog-switcher">
+                    <button class="page-btn" type="button" data-catalog-prev="home">&#8249;</button>
+                    <span id="homeCatalogInfo">1 / 1</span>
+                    <button class="page-btn" type="button" data-catalog-next="home">&#8250;</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="promo-section" id="promo">
+            <div class="container">
+                <div class="promo-card">
+                    <div class="promo-image">
+                        <img src="img/audiA5.webp" alt="Літня акція AUTODRIVE">
+                    </div>
+                    <div class="promo-content">
+
+
+
+
+                        
+                        <span>Акція</span>
+                        <h2>Літнє обслуговування <strong>-20%</strong></h2>
+                        <p>Підготуйте автомобіль до сезону та отримайте знижку на діагностику, заміну мастила і комплексну перевірку.</p>
+                        <a href="car-catalog.html" class="hero-btn hero-btn-primary">Детальніше про акцію</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-section" id="about">
+            <div class="container section-column">
+                <div class="section-head">
+                    <div>
+                        <h2>Чому обирають нас?</h2>
+                        <p>Ми допомагаємо купити авто спокійно: від перевірки до оформлення</p>
+                    </div>
+                </div>
+
+                <div class="why-layout">
+                    <div class="why-image">
+                        <img src="img/salon.jpg" alt="Автосалон AUTODRIVE">
+                    </div>
+                    <div class="why-list">
+                        <article>
+                            <strong>Понад 10 років на ринку</strong>
+                            <span>Досвід і довіра клієнтів, які повертаються за наступним авто.</span>
+                        </article>
+                        <article>
+                            <strong>Перевірені автомобілі</strong>
+                            <span>Кожне авто проходить діагностику перед продажем.</span>
+                        </article>
+                        <article>
+                            <strong>Вигідне кредитування</strong>
+                            <span>Підбираємо умови оплати під бюджет і потреби клієнта.</span>
+                        </article>
+                        <article>
+                            <strong>Професійна команда</strong>
+                            <span>Консультанти, сервісні спеціалісти й менеджери супроводжують угоду.</span>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-section" id="services">
+            <div class="container section-column">
+                <div class="section-head">
+                    <div>
+                        <h2>Наші послуги</h2>
+                        <p>Сервіс, діагностика і підтримка після купівлі авто</p>
+                    </div>
+                </div>
+                <div class="service-list">
+                    <article class="service-item"><img src="img/Layer_1 (1).png" alt=""><div><h3>Технічне обслуговування</h3><p>Комплексна діагностика та регулярний сервіс вашого авто.</p></div></article>
+                    <article class="service-item"><img src="img/_x3C_Layer_x3E_ (1).png" alt=""><div><h3>Ремонт авто</h3><p>Професійний ремонт двигуна, підвіски та гальмівної системи.</p></div></article>
+                    <article class="service-item"><img src="img/Frame (2).png" alt=""><div><h3>Діагностика</h3><p>Сучасне обладнання для точної перевірки всіх систем.</p></div></article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-layout">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <span class="logo-title"><span class="logo-white">AUTO</span><span class="logo-yellow">DRIVE</span></span>
+                    <span class="logo-text">Автосалон і сервісний центр</span>
+                </a>
+                <p>Перевірені автомобілі, чесні умови та підтримка після покупки.</p>
+            </div>
+            <div class="footer-col"><h3>Навігація</h3><a href="index.html">Головна</a><a href="car-catalog.html">Каталог авто</a><a href="#services">Послуги</a><a href="#contacts">Контакти</a></div>
+            <div class="footer-col"><h3>Компанія</h3><a href="#about">Про нас</a><a href="#promo">Акції</a><a href="#test-drive">Тест-драйв</a><a href="tel:+380671234567">+38 (067) 123 45 67</a></div>
+            <div class="footer-col footer-form"><h3>Підписка</h3><p>Отримуйте нові пропозиції першими</p><form><input type="email" placeholder="Ваш email"><button type="submit">+</button></form></div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

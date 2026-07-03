@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>Каталог авто | AUTODRIVE</title>
+</head>
+<body class="catalog-page">
+    <header class="header catalog-header-page">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-title"><span class="logo-white">AUTO</span><span class="logo-yellow">DRIVE</span></span>
+                <span class="logo-text">Автосалон і сервісний центр</span>
+            </a>
+
+            <nav class="nav" id="nav">
+                <a href="index.html">Головна</a>
+                <a href="car-catalog.html" class="active-link">Каталог авто</a>
+                <a href="index.html#services">Послуги</a>
+                <a href="index.html#test-drive">Тест-драйв</a>
+                <a href="index.html#promo">Акції</a>
+                <a href="index.html#about">Про нас</a>
+                <a href="index.html#contacts">Контакти</a>
+            </nav>
+
+            <a href="tel:+380671234567" class="header-phone">+38 (067) 123 45 67</a>
+            <a href="tel:+380671234567" class="call-btn">Замовити дзвінок</a>
+
+            <button class="burger" id="burger" type="button" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="catalog-main">
+        <section class="catalog-hero">
+            <div class="container section-column">
+                <p class="breadcrumbs">Головна / Каталог авто</p>
+                <div class="catalog-title-row">
+                    <div>
+                        <h1>Каталог авто</h1>
+                        <p>Знайдіть свій ідеальний автомобіль серед перевірених варіантів</p>
+                    </div>
+                    <div class="help-card">
+                        <div>
+                            <h2>Потрібна допомога у виборі авто?</h2>
+                            <p>Наші експерти підберуть найкращий варіант саме для вас</p>
+                            <a href="tel:+380671234567">Отримати консультацію</a>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="search-panel" id="catalogSearch">
+                    <label>Марка
+                        <select name="brand">
+                            <option value="all">Всі марки</option>
+                            <option value="audi">Audi</option>
+                            <option value="bmw">BMW</option>
+                            <option value="mercedes">Mercedes-Benz</option>
+                            <option value="toyota">Toyota</option>
+                            <option value="lexus">Lexus</option>
+                            <option value="tesla">Tesla</option>
+                        </select>
+                    </label>
+                    <label>Модель
+                        <input type="text" name="model" placeholder="Введіть модель">
+                    </label>
+                    <label>Рік випуску
+                        <select name="year">
+                            <option value="all">Всі роки</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                        </select>
+                    </label>
+                    <label>Ціна, грн
+                        <select name="price">
+                            <option value="all">Будь-яка</option>
+                            <option value="1500000">до 1 500 000</option>
+                            <option value="2500000">до 2 500 000</option>
+                            <option value="3500000">до 3 500 000</option>
+                        </select>
+                    </label>
+                    <label>Тип палива
+                        <select name="fuel">
+                            <option value="all">Всі типи</option>
+                            <option value="petrol">Бензин</option>
+                            <option value="diesel">Дизель</option>
+                            <option value="hybrid">Гібрид</option>
+                            <option value="electric">Електро</option>
+                        </select>
+                    </label>
+                    <label>Коробка передач
+                        <select name="gearbox">
+                            <option value="all">Всі типи</option>
+                            <option value="auto">Автомат</option>
+                            <option value="manual">Механіка</option>
+                        </select>
+                    </label>
+                    <label>Привід
+                        <select name="drive">
+                            <option value="all">Всі типи</option>
+                            <option value="awd">Повний</option>
+                            <option value="fwd">Передній</option>
+                            <option value="rwd">Задній</option>
+                        </select>
+                    </label>
+                    <label>Пробіг, км
+                        <select name="mileage">
+                            <option value="all">Будь-який</option>
+                            <option value="30000">до 30 000</option>
+                            <option value="70000">до 70 000</option>
+                            <option value="120000">до 120 000</option>
+                        </select>
+                    </label>
+                    <button class="search-btn" type="submit">Показати авто</button>
+                    <button class="reset-btn" type="button" id="resetCatalogFilters">Скинути фільтри</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="catalog-results">
+            <div class="container catalog-layout">
+                <aside class="filter-sidebar">
+                    <div class="side-filter">
+                        <h2>Ціна</h2>
+                        <button type="button" data-side-filter="price" data-value="1500000">до 1 500 000 грн</button>
+                        <button type="button" data-side-filter="price" data-value="2500000">до 2 500 000 грн</button>
+                        <button type="button" data-side-filter="price" data-value="3500000">до 3 500 000 грн</button>
+                    </div>
+                    <div class="side-filter">
+                        <h2>Марка</h2>
+                        <button type="button" data-side-filter="brand" data-value="audi">Audi</button>
+                        <button type="button" data-side-filter="brand" data-value="bmw">BMW</button>
+                        <button type="button" data-side-filter="brand" data-value="mercedes">Mercedes-Benz</button>
+                        <button type="button" data-side-filter="brand" data-value="toyota">Toyota</button>
+                        <button type="button" data-side-filter="brand" data-value="tesla">Tesla</button>
+                    </div>
+                    <div class="side-filter">
+                        <h2>Тип палива</h2>
+                        <button type="button" data-side-filter="fuel" data-value="diesel">Дизель</button>
+                        <button type="button" data-side-filter="fuel" data-value="petrol">Бензин</button>
+                        <button type="button" data-side-filter="fuel" data-value="hybrid">Гібрид</button>
+                        <button type="button" data-side-filter="fuel" data-value="electric">Електро</button>
+                    </div>
+                    <div class="side-filter">
+                        <h2>Рік випуску</h2>
+                        <button type="button" data-side-filter="year" data-value="2024">2024</button>
+                        <button type="button" data-side-filter="year" data-value="2023">2023</button>
+                        <button type="button" data-side-filter="year" data-value="2022">2022</button>
+                        <button type="button" data-side-filter="year" data-value="2021">2021</button>
+                    </div>
+                    <div class="side-filter">
+                        <h2>Пробіг</h2>
+                        <button type="button" data-side-filter="mileage" data-value="30000">до 30 000 км</button>
+                        <button type="button" data-side-filter="mileage" data-value="70000">до 70 000 км</button>
+                        <button type="button" data-side-filter="mileage" data-value="120000">до 120 000 км</button>
+                    </div>
+                </aside>
+
+                <div class="catalog-content">
+                    <div class="result-bar">
+                        <span id="catalogCount">Знайдено: 0 авто</span>
+                        <div class="result-actions">
+                            <button class="outline-btn active" type="button" data-catalog-quick="all">Всі</button>
+                            <button class="outline-btn" type="button" data-catalog-quick="new">Нові</button>
+                            <button class="outline-btn" type="button" data-catalog-quick="electric">Електро</button>
+                        </div>
+                    </div>
+
+                    <div class="catalog-grid" id="catalogGrid">
+                        <article class="car-card catalog-item" data-category="new premium" data-brand="bmw" data-fuel="diesel" data-year="2024" data-mileage="0" data-price="2450000" data-model="x5" data-gearbox="auto" data-drive="awd">
+                            <div class="car-image"><span class="badge">Нове</span><img src="img/bacground_audiQ5.webp" alt="BMW X5"></div>
+                            <div class="car-body"><button class="fav-btn" type="button">♡</button><h3>BMW X5</h3><p>2024 · 3.0 л · Дизель · Автомат</p><p>Пробіг: 0 км</p><div class="car-bottom"><strong>2 450 000 грн</strong><a href="#" class="small-btn">Детальніше</a></div></div>
+                        </article>
+                        <article class="car-card catalog-item" data-category="new premium" data-brand="mercedes" data-fuel="diesel" data-year="2023" data-mileage="8000" data-price="2890000" data-model="gle" data-gearbox="auto" data-drive="awd">
+                            <div class="car-image"><img src="img/bacground_audiA6.webp" alt="Mercedes-Benz GLE 300d"></div>
+                            <div class="car-body"><button class="fav-btn" type="button">♡</button><h3>Mercedes-Benz GLE 300d</h3><p>2023 · 2.0 л · Дизель · Автомат</p><p>Пробіг: 8 000 км</p><div class="car-bottom"><strong>2 890 000 грн</strong><a href="#" class="small-btn">Детальніше</a></div></div>
+                        </article>
+                        <article class="car-card catalog-item" data-category="used premium" data-brand="audi" data-fuel="diesel" data-year="2022" data-mileage="65000" data-price="2650000" data-model="q7" data-gearbox="auto" data-drive="awd">
+                            <div class="car-image"><img src="img/bacground_audi.webp" alt="Audi Q7"></div>
+                            <div class="car-body"><button class="fav-btn" type="button">♡</button><h3>Audi Q7</h3><p>2022 · 3.0 л · Дизель · Автомат</p><p>Пробіг: 65 000 км</p><div class="car-bottom"><strong>2 650 000 грн</strong><a href="#" class="small-btn">Детальніше</a></div></div>
+                        </article>
+                        <article class="car-card catalog-item" data-category="used" data-brand="toyota" data-fuel="diesel" data-year="2020" data-mileage="87000" data-price="3450000" data-model="land cruiser" data-gearbox="auto" data-drive="awd">
+                            <div class="car-image"><img src="img/audiA5.webp" alt="Toyota Land Cruiser 300"></div>
+                            <div class="car-body"><button class="fav-btn" type="button">♡</button><h3>Toyota Land Cruiser 300</h3><p>2020 · 3.5 л · Дизель · Автомат</p><p>Пробіг: 87 000 км</p><div class="car-bottom"><strong>3 450 000 грн</strong><a href="#" class="small-btn">Детальніше</a></div></div>
+                        </article>
+                        <article class="car-card catalog-item" data-category="used" data-brand="lexus" data-fuel="hybrid" data-year="2022" data-mileage="35000" data-price="2550000" data-model="rx 350" data-gearbox="auto" data-drive="awd">
+                            <div class="car-image"><img src="img/bacground_audiA6.webp" alt="Lexus RX 350"></div>
+                            <div class="car-body"><button class="fav-btn" type="button">♡</button><h3>Lexus RX 350</h3><p>2022 · 3.5 л · Гібрид · Автомат</p><p>Пробіг: 35 000 км</p><div class="car-bottom"><strong>2 550 000 грн</strong><a href="#" class="small-btn">Детальніше</a></div></div>
+                        </article>
+                        <article class="car-card catalog-item" data-category="used" data-brand="volkswagen" data-fuel="diesel" data-year="2021" data-mileage="72000" data-price="2150000" data-model="touareg" data-gearbox="auto" data-drive="awd">
+                            <div class="car-image"><img src="img/bacground_audiQ5.webp" alt="Volkswagen Touareg"></div>
+                            <div class="car-body"><button class="fav-btn" type="button">♡</button><h3>Volkswagen Touareg</h3><p>2021 · 3.0 л · Дизель · Автомат</p><p>Пробіг: 72 000 км</p><div class="car-bottom"><strong>2 150 000 грн</strong><a href="#" class="small-btn">Детальніше</a></div></div>
+                        </article>
+                        <article class="car-card catalog-item" data-category="electric new" data-brand="tesla" data-fuel="electric" data-year="2023" data-mileage="12000" data-price="1850000" data-model="model y" data-gearbox="auto" data-drive="awd">
+                            <div class="car-image"><span class="badge green">Електро</span><img src="img/bacground_audi.webp" alt="Tesla Model Y"></div>
+                            <div class="car-body"><button class="fav-btn" type="button">♡</button><h3>Tesla Model Y</h3><p>2023 · Електро · Автомат</p><p>Пробіг: 12 000 км</p><div class="car-bottom"><strong>1 850 000 грн</strong><a href="#" class="small-btn">Детальніше</a></div></div>
+                        </article>
+                        <article class="car-card catalog-item" data-category="used" data-brand="honda" data-fuel="petrol" data-year="2019" data-mileage="75000" data-price="1150000" data-model="cr-v" data-gearbox="auto" data-drive="awd">
+                            <div class="car-image"><img src="img/audiA5.webp" alt="Honda CR-V"></div>
+                            <div class="car-body"><button class="fav-btn" type="button">♡</button><h3>Honda CR-V</h3><p>2019 · 2.4 л · Бензин · Автомат</p><p>Пробіг: 75 000 км</p><div class="car-bottom"><strong>1 150 000 грн</strong><a href="#" class="small-btn">Детальніше</a></div></div>
+                        </article>
+                        <article class="car-card catalog-item" data-category="new premium" data-brand="audi" data-fuel="petrol" data-year="2024" data-mileage="0" data-price="3120000" data-model="a8" data-gearbox="auto" data-drive="awd">
+                            <div class="car-image"><span class="badge">Нове</span><img src="img/bacground_audiA6.webp" alt="Audi A8"></div>
+                            <div class="car-body"><button class="fav-btn" type="button">♡</button><h3>Audi A8</h3><p>2024 · 3.0 л · Бензин · Автомат</p><p>Пробіг: 0 км</p><div class="car-bottom"><strong>3 120 000 грн</strong><a href="#" class="small-btn">Детальніше</a></div></div>
+                        </article>
+                        <article class="car-card catalog-item" data-category="electric used" data-brand="audi" data-fuel="electric" data-year="2022" data-mileage="28000" data-price="2320000" data-model="e-tron" data-gearbox="auto" data-drive="awd">
+                            <div class="car-image"><span class="badge green">Електро</span><img src="img/bacground_audi.webp" alt="Audi e-tron"></div>
+                            <div class="car-body"><button class="fav-btn" type="button">♡</button><h3>Audi e-tron</h3><p>2022 · Електро · Автомат</p><p>Пробіг: 28 000 км</p><div class="car-bottom"><strong>2 320 000 грн</strong><a href="#" class="small-btn">Детальніше</a></div></div>
+                        </article>
+                    </div>
+
+                    <div class="catalog-switcher">
+                        <button class="page-btn" type="button" data-catalog-prev="main">&#8249;</button>
+                        <span id="catalogPageInfo">1 / 1</span>
+                        <button class="page-btn" type="button" data-catalog-next="main">&#8250;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="quality-section">
+            <div class="container quality-list">
+                <article><strong>Перевірені авто</strong><span>Кожен автомобіль проходить детальну перевірку</span></article>
+                <article><strong>Гарантії якості</strong><span>Надаємо гарантію та підтримку після купівлі</span></article>
+                <article><strong>Вигідні умови</strong><span>Кредитування, лізинг і страхування на прозорих умовах</span></article>
+                <article><strong>Trade-in</strong><span>Приймаємо ваше авто в обмін на нове</span></article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-layout">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <span class="logo-title"><span class="logo-white">AUTO</span><span class="logo-yellow">DRIVE</span></span>
+                    <span class="logo-text">Автосалон і сервісний центр</span>
+                </a>
+                <p>Перевірені автомобілі, чесні умови та підтримка після покупки.</p>
+            </div>
+            <div class="footer-col"><h3>Навігація</h3><a href="index.html">Головна</a><a href="car-catalog.html">Каталог авто</a><a href="index.html#services">Послуги</a><a href="index.html#contacts">Контакти</a></div>
+            <div class="footer-col"><h3>Компанія</h3><a href="index.html#about">Про нас</a><a href="index.html#promo">Акції</a><a href="index.html#test-drive">Тест-драйв</a><a href="tel:+380671234567">+38 (067) 123 45 67</a></div>
+            <div class="footer-col footer-form"><h3>Підписка</h3><p>Отримуйте нові пропозиції першими</p><form><input type="email" placeholder="Ваш email"><button type="submit">+</button></form></div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

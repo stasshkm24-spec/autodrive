@@ -1,0 +1,329 @@
+@media (max-width: 1180px) {
+    .container {
+        padding: 0 30px;
+    }
+
+    .nav {
+        gap: 14px;
+    }
+
+    .nav a {
+        font-size: 14px;
+    }
+
+    .header-phone {
+        display: none;
+    }
+
+    .hero-content h1 {
+        font-size: 50px;
+    }
+
+    .home-cars .car-card,
+    .catalog-grid .car-card {
+        flex-basis: calc(25% - 14px);
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        padding: 16px 0;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .call-btn {
+        display: none;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 26px 30px;
+        background: rgba(12, 13, 15, 0.98);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        box-shadow: 0 16px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .hero-container {
+        padding-top: 105px;
+    }
+
+    .hero-content {
+        max-width: 560px;
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+    }
+
+    .hero-content p {
+        font-size: 19px;
+    }
+
+    .section-head,
+    .catalog-title-row,
+    .result-bar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .home-cars .car-card,
+    .catalog-grid .car-card {
+        flex-basis: calc(50% - 9px);
+    }
+
+    .catalog-layout {
+        flex-direction: column;
+    }
+
+    .filter-sidebar {
+        width: 100%;
+        flex-basis: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .side-filter {
+        flex: 1 1 calc(33.333% - 12px);
+        min-width: 210px;
+        margin: 0;
+        padding: 0;
+        border-bottom: 0;
+    }
+
+    .help-card {
+        width: 100%;
+        flex-basis: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 22px;
+    }
+
+    .logo-title {
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+
+    .logo-text {
+        font-size: 9px;
+    }
+
+    .hero {
+        min-height: 720px;
+    }
+
+    .hero-container {
+        min-height: 720px;
+        justify-content: flex-end;
+        padding-top: 104px;
+        padding-bottom: 42px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-content p {
+        font-size: 17px;
+    }
+
+    .hero-actions {
+        align-items: stretch;
+    }
+
+    .hero-btn {
+        min-height: 50px;
+        font-size: 16px;
+    }
+
+    .section-dark,
+    .catalog-results,
+    .services-section {
+        padding: 48px 0;
+    }
+
+    .catalog-hero {
+        padding-top: 104px;
+    }
+
+    .section-head h2,
+    .catalog-title-row h1 {
+        font-size: 30px;
+    }
+
+    .category-tabs {
+        margin-left: -22px;
+        margin-right: -22px;
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .search-panel {
+        padding: 18px;
+    }
+
+    .search-panel label {
+        flex-basis: calc(50% - 10px);
+        min-width: 160px;
+    }
+
+    .search-btn,
+    .reset-btn {
+        width: 100%;
+    }
+
+    .quality-list article,
+    .why-list article,
+    .service-item {
+        flex-basis: calc(50% - 10px);
+    }
+
+    .promo-card,
+    .why-layout {
+        flex-direction: column;
+    }
+
+    .promo-content {
+        padding: 34px 24px;
+    }
+
+    .why-image {
+        min-height: 280px;
+    }
+}
+
+@media (max-width: 560px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .nav {
+        padding: 24px 16px;
+    }
+
+    .hero {
+        min-height: 100svh;
+    }
+
+    .hero-container {
+        min-height: 100svh;
+        padding-top: 96px;
+        padding-bottom: 28px;
+    }
+
+    .hero-content h1 {
+        font-size: 31px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .hero-btn {
+        width: 100%;
+        padding: 0 18px;
+        text-align: center;
+    }
+
+    .slider-controls {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 34px;
+    }
+
+    .slider-dot {
+        width: 24px;
+    }
+
+    .slider-dot.active {
+        width: 38px;
+    }
+
+    .section-head h2,
+    .catalog-title-row h1 {
+        font-size: 26px;
+    }
+
+    .text-link {
+        white-space: normal;
+    }
+
+    .home-cars .car-card,
+    .catalog-grid .car-card {
+        flex-basis: 100%;
+    }
+
+    .car-image {
+        height: 185px;
+    }
+
+    .car-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .small-btn {
+        width: 100%;
+    }
+
+    .search-panel label {
+        flex-basis: 100%;
+    }
+
+    .result-actions,
+    .quality-list,
+    .service-list {
+        width: 100%;
+    }
+
+    .quality-list article,
+    .why-list article,
+    .service-item {
+        flex-basis: 100%;
+    }
+
+    .promo-section,
+    .why-section {
+        padding: 48px 0;
+    }
+
+    .promo-content h2 {
+        font-size: 26px;
+    }
+
+    .promo-content .hero-btn {
+        width: 100%;
+    }
+
+    .footer-layout {
+        flex-direction: column;
+    }
+
+    .footer-col,
+    .footer-brand,
+    .footer-form {
+        width: 100%;
+        flex-basis: auto;
+    }
+}
